@@ -13,8 +13,8 @@ int palin_part(string s){
     }
     
     for(int l=2;l<=n;l++){
-        for(int i=0;i<n-l+1;i++){
-            int j=i+l-1;
+        for(int i=0;i<n-l+1;i++){//no. of places in which we have to fill
+            int j=i+l-1;// finding column corresponding to i.
             
             if( l == 2 )
                 p[i][j]=(s[i]==s[j]);
