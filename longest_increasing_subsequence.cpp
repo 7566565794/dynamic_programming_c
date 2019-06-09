@@ -12,7 +12,8 @@ int lis(int arr[],int n){
             }
         }
     }
-     return *max_element(dp, dp+n);
+     return *max_element(dp, dp+n);// this function 'max_element' is used to search for the maxi value present in the entire 
+	// array. this function is present in bits/stdc++.h
 }
 
   
