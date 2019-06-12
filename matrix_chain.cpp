@@ -7,7 +7,7 @@ int matrix_mul(int arr[],int n){
         dp[i][i]=0;
     }
     for(int l=2;l<n;l++){
-        for(int i=1;i<n-l+1;i++){
+        for(int i=0;i<n-l+1;i++){
             int j=i+l-1;
             dp[i][j]=INT_MAX;
             for(int k=i;k<j;k++){
