@@ -43,3 +43,22 @@ int main() {
     }
 	return 0;
 }
+/* wrong way of taking the input if we take input like below our solution will be accepted reason coz 
+when u are taking input techincally ur last character in the string will be null character so u have to take 1 more location 
+as null best way to take input is above method just take through cin 
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int l1;
+	    int l2;
+	    cin>>l1;
+	    cin>>l2;
+	    char str1[l1];
+	    char str2[l2];
+	    for(int i=0;i<l1;i++){// please dont take like this request for any charater even for longest common subseq
+	        cin>>str1[i];
+	    }
+	    for(int i=0;i<l1;i++){
+	        cin>>str2[i];
+	    }*/
