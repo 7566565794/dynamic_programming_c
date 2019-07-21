@@ -1,3 +1,11 @@
+/*
+1
+8
+1 5 8 9 10 17 17 20 output ==22
+1
+2 1 1 
+output 6
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
