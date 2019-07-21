@@ -1,35 +1,35 @@
-//there exist some error
-#include<iostream>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int cutrod(int price[], int n) 
-{ 
-   int val[n+1]; 
-   val[0] = 0; 
-   int i, j; 
-  
-   // Build the table val[] in bottom up manner and return the last entry 
-   // from the table 
-   for (i = 1; i<=n; i++) 
-   { 
-       int max_val = INT_MIN; 
-       for (j = 0; j < i; j++) 
-         max_val = max(max_val, price[j] + val[i-j-1]); 
-       val[i] = max_val; 
-   } 
-  
-   return val[n]; 
-} 
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-        int n;
-        cin>>n;
-        int arr[n];
-        for(int i=0;i<n;i++){
-            cin>>arr[i];
-        }
-        cout<<cutrod(arr,n)<<endl;
+
+int cutting_rod(int val[],int n){
+    int dp[n+1];
+    dp[0]=0;
+    
+    for(int i=1;i<=n;i++){
+        dp[i]=INT_MIN;
     }
+    for(int i=1;i<=n;i++){
+        for(int j=0;j<i;j++){
+            dp[i]=max(dp[i],val[j]+dp[i-j-1]);
+        }
+    }
+    for(int i=0;i<=n;i++){
+        cout<<dp[i]<<" ";
+    }
+    return dp[n];
+}
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int arr[n];
+	    for(int i=0;i<n;i++){
+	        cin>>arr[i];
+	    }
+	    cout<<cutting_rod(arr,n)<<endl;
+	}
+	return 0;
 }
